@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table id="Saatiedot" name="Saatiedot" xmlns="http://www.w3.org/1999/xhtml">
+<tr>
+    <p><td><a href="{{linkki}}">{{teksti}}</a></td></p>
+    <td><h2>Viimeksi päivitetty {{update}}</h2></td>
+</tr>
+<tr>
+    <td><h3>Ennuste aikavälille</h3></td>
+    <td><h3>Aurinko nousee</h3></td>
+    <td><h3>Aurinko laskee</h3></td>
+    <td><h3>Lämpötila °C</h3></td>
+    <td><h3>Ilmanpaine hPa</h3></td>
+    <td><h3>Sateen todennäköinen määrä</h3></td>
+    <td><h3>Minimi</h3></td>
+    <td><h3>Maksimi</h3></td>
+    <td><h3>Tuulennopeus km/h</h3></td>
+    <td><h3>Tuulen suunta</h3></td>
+    <td><h3>Tarkoittaa</h3></td>
+</tr>
+{%for i in otukset%}
+<tr>
+    <td><label>{{i['time']}} - {{i['time2']}}</label></td>
+    <td><label>{{rise}}</label></td>
+    <td><label>{{sets}}</label></td>
+    <td><label>{{i.lampo}}</label></td>
+    <td><label>{{i.paine}}</label></td>
+    <td><label>{{i.sade_ksm}}</label></td>
+    <td><label>{{i.sade_min}}</label></td>
+    <td><label>{{i.sade_max}}</label></td>
+    <td><label>{{i.tuulennopeus}}</label></td>
+    <td><label>{{i.tuulensuunta}}</label></td>
+    <td><label>{{i.symboli}}</label></td>
+</tr>
+{%endfor%}
+</table>
